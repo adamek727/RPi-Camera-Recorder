@@ -7,7 +7,12 @@ Download and install Raspberry OS for RPi4
 Install following dependences:
 
 ```
-sudo apt install vim git wget libopencv-dev -y
+sudo apt install vim git wget libopencv-dev cmake -y
+```
+
+Prepare data storage folder
+```
+mkdir ~/Data/
 ```
 
 Clone this repo and run the install.sh script
