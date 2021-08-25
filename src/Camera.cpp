@@ -32,8 +32,8 @@ cv::Mat Camera::get_frame() {
 
 void Camera::open_camera() {
     cap_.open(camera_index_);
-    cap_.set(CV_CAP_PROP_FRAME_WIDTH, settings_.width());
-    cap_.set(CV_CAP_PROP_FRAME_HEIGHT, settings_.height());
-    cap_.set(CV_CAP_PROP_FPS, settings_.fps());
+    cap_.set(CV_CAP_PROP_FRAME_WIDTH, settings_.camera_width());
+    cap_.set(CV_CAP_PROP_FRAME_HEIGHT, settings_.camera_height());
+    cap_.set(CV_CAP_PROP_FPS, settings_.camera_fps());
     cap_.grab();
 }

@@ -15,7 +15,7 @@ void Application::run() {
         while (true) {
             auto stop = std::chrono::high_resolution_clock::now();
             auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count();
-            if (duration >= (1/settings_.fps() * 1000)) {break;}
+            if (duration >= (1/settings_.camera_fps() * 1000)) {break;}
         }
 
         if (cv::waitKey(1) == 0) {

@@ -1,0 +1,15 @@
+camera:
+  width: 2560
+  height: 1440
+  fps: 1.0
+  gain: 20.0
+  exposition_: 100
+
+roi:
+  left_top_x: 0
+  left_top_y: 0
+  right_bottom_x: 500
+  right_bottom_y: 500
+
+debug:
+  imshow: true
