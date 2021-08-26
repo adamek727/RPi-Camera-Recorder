@@ -9,7 +9,9 @@ public:
              size_t camera_height,
              float camera_fps,
              float camera_gain,
-             size_t camera_exposition,
+             int camera_exposition,
+             float camera_exposition_auto,
+             bool roi_enable,
              size_t roi_left_top_x,
              size_t roi_left_top_y,
              size_t roi_right_bottom_x,
@@ -20,6 +22,8 @@ public:
             camera_fps_ {camera_fps},
             camera_gain_ {camera_gain},
             camera_exposition_ {camera_exposition},
+            camera_exposition_auto_ {camera_exposition_auto},
+            roi_enable_ {roi_enable},
             roi_left_top_x_ {roi_left_top_x},
             roi_left_top_y_ {roi_left_top_y},
             roi_right_bottom_x_ {roi_right_bottom_x},
@@ -32,7 +36,9 @@ public:
     size_t camera_height() const {return camera_height_;};
     size_t camera_fps() const {return camera_fps_;};
     float camera_gain() const {return camera_gain_;};
-    size_t camera_exposition() const {return camera_exposition_;};
+    int camera_exposition() const {return camera_exposition_;};
+    float camera_exposition_auto() const {return camera_exposition_auto_;};
+    bool roi_enable() const {return roi_enable_;};
     size_t roi_left_top_x() const {return roi_left_top_x_;};
     size_t roi_left_top_y() const {return roi_left_top_y_;};
     size_t roi_right_bottom_x() const {return roi_right_bottom_x_;};
@@ -45,7 +51,9 @@ private:
     size_t camera_height_;
     float camera_fps_;
     float camera_gain_;
-    size_t camera_exposition_;
+    int camera_exposition_;
+    float camera_exposition_auto_;
+    bool roi_enable_;
     size_t roi_left_top_x_;
     size_t roi_left_top_y_;
     size_t roi_right_bottom_x_;

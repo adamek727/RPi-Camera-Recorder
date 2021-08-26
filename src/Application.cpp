@@ -12,6 +12,11 @@ void Application::run() {
         auto frame = camera_.get_frame();
         storage_handler_.save_image(frame, camera_.get_frame_number());
 
+        if (settings_.debug_imshow()) {
+            cv::imshow("camera", frame);
+            cv::waitKey(1);
+        }
+
         while (true) {
             auto stop = std::chrono::high_resolution_clock::now();
             auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count();

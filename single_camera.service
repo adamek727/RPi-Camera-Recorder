@@ -8,7 +8,7 @@ User=pi
 WorkingDirectory = /home/pi/
 Restart=on-failure
 RestartSec=1s
-ExecStart=/usr/bin/SingleCamera
+ExecStart=/usr/bin/SingleCamera /home/pi/config.yaml
 
 [Install]
 WantedBy=multi-user.target

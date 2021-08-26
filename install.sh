@@ -1,3 +1,5 @@
+export ACCOUNT=pi
+
 echo "Clearing"
 rm -r build/
 rm /usr/bin/SingleCamera
@@ -10,6 +12,9 @@ echo "Installation"
 cp build/SingleCamera /usr/bin/SingleCamera
 cp single_camera.service /lib/systemd/system/single_camera.service
 chmod 644 /lib/systemd/system/single_camera.service
+
+cp config.yaml /home/$ACCOUNT/config.yaml
+chown $ACCOUNT /home/$ACCOUNT/config.yaml
 
 echo "Service Enabling"
 systemctl daemon-reload
